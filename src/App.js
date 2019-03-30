@@ -21,9 +21,9 @@ class App extends React.Component{
                        <Route path='/app/cart' component={Cart}/> 
                        <Route path='/app/mine' component={Mine}/> 
                        <Route path='/app/nation' component={Nation}/> 
-                       <Redirect from="/"  to="app/home"/>
+                       <Redirect from="/"  to="/home"/>
                  </Switch>  
-                <Xfooter/>     
+                 <Xfooter/>
             </div> 
       }  
 
