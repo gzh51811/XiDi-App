@@ -1,0 +1,27 @@
+.foot_tab {
+    width: 100%;
+    position: fixed;
+    height: 3.33333rem;
+    border: 1px solid #dddddd;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    z-index: 100;
+    padding: 0.41667rem 0;
+}
+
+.clearfix:after {
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+    line-height: 0;
+    content: " ";
+}
+
+.foot_tab li {
+    display: block;
+    float: left;
+    width: 20%;
+    text-align: center;
+}
