@@ -16,12 +16,11 @@ class App extends React.Component{
       render(){
         return<div>
                 <Switch>
-                       <Route path='/app/home' component={Home}/> 
-                       <Route path='/app/category' component={Category}/> 
-                       <Route path='/app/cart' component={Cart}/> 
-                       <Route path='/app/mine' component={Mine}/> 
-                       <Route path='/app/nation' component={Nation}/> 
-                       <Redirect from="/"  to="/home"/>
+                       <Route path='/' exact component={Home}/> 
+                       <Route path='/category' component={Category}/> 
+                       <Route path='/cart' component={Cart}/> 
+                       <Route path='/mine' component={Mine}/> 
+                       <Route path='/nation' component={Nation}/> 
                  </Switch>  
                  <Xfooter/>
             </div> 

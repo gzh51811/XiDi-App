@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './style/Nsection.css';
+
 
         function Nsection(){
             return(

@@ -21,8 +21,7 @@ ReactDOM.render(
             <Route path="/detail" component={Detail} />
             <Route path="/list" component={List} />
             <Route path="/register" component={Register} />
-            <Route path="/app"  component={App} />
-            <Redirect from="/" to="/app/home"/>
+            <Route path="/"  component={App} />
         </Switch>
     </HashRouter>
     , document.querySelector("#app")
