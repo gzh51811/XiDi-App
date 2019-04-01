@@ -1,17 +1,23 @@
-import  React from 'react';
+import React from 'react';
 
+import Header from '../../components/cart/header';
+import Login from '../../components/cart/login';
+import Purchase from '../../components/cart/purchase';
+import Command from '../../components/cart/command';
 
+class Cart extends React.Component {
+    render() {
+        return (
+            <div className="cart">
+                <Header />
+                <Login />
+                <Purchase />
+                <Command />
+            </div>
 
-class Cart extends React.Component{
-      render(){
-          return(
-              <div className="cart">
-                            <h1>购物车  </h1> 
-                </div>     
-
-          )
-      }  
+        )
+    }
 
 }
 
-export default  Cart
+export default Cart

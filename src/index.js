@@ -12,8 +12,12 @@ import { HashRouter } from 'react-router-dom';
 import { Route,Switch,Redirect,withRouter} from 'react-router-dom';
 
 
+import Swiper from 'swiper/dist/js/swiper.js'
+import 'swiper/dist/css/swiper.min.css'
+
 //引入样式
 import '../style/index.css';
+import '../style/public.css';
 
 ReactDOM.render(
     <HashRouter>
