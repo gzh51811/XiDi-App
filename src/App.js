@@ -3,7 +3,7 @@ import React  from 'react';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
 import Category from './pages/Category';
-import Mine from './pages/Mine';
+
 import Nation from './pages/Nation';
 
 import Xfooter from './components/Xfooter';
@@ -19,7 +19,6 @@ class App extends React.Component{
                        <Route path='/' exact component={Home}/> 
                        <Route path='/category' component={Category}/> 
                        <Route path='/cart' component={Cart}/> 
-                       <Route path='/mine' component={Mine}/> 
                        <Route path='/nation' component={Nation}/> 
                  </Switch>  
                  <Xfooter/>
