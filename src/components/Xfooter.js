@@ -57,7 +57,6 @@ class Xfooter extends React.Component {
     }
 
     componentWillMount(){
-        console.log(this.props)
         let {location} = this.props;
         this.setState({
             cur : location.pathname
