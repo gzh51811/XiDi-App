@@ -1,19 +1,19 @@
-import  React from 'react';
+import React from 'react';
 
-import { Route,Switch,Redirect,withRouter} from 'react-router-dom';
+import {Route, Switch, Redirect, withRouter} from 'react-router-dom';
 
-class Category extends React.Component{
-      render(){
-          return(
-              <div style={{paddingTop : '30px'}}>
-                <Myswiper />
-                 <h1>fenlei </h1>
-                 
-                </div>    
+import Header from '../../components/Category/Header'
 
-          )
-      }  
+class Category extends React.Component {
+    render() {
+        return (
+            <div className='main'>
+                <Header />
+            </div>
+
+        )
+    }
 
 }
 
-export default  Category
+export default Category

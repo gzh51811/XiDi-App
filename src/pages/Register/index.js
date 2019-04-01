@@ -1,12 +1,16 @@
 import React from 'react'
 
+import Rheader from '../../components/Register/Rheader'
+import Rsection from  '../../components/Register/Rsection'
 
+
+import './register.css';
 
 class Register extends React.Component{
      render(){
-        return<div>
-               <h1>注册</h1>
-
+        return<div className="othiscont" style={{height:"667px"}}>
+                    <Rheader/>
+                    <Rsection/>
                 </div>
 
      }   

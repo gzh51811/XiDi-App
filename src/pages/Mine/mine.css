@@ -1,0 +1,211 @@
+.othiscont {
+    height: 100%;
+    background-image: url(https://static.xidibuy.com/m/static/global/images/1.0.0/loge_background.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    padding: 0 0.83333rem;
+}
+.login_head{
+    height: 4rem;
+    line-height: 4rem;
+    color: #fff;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    z-index: 9;
+}
+.login_head .header_left {
+    position: absolute;
+    left: 1.25rem;
+}
+
+
+
+.login_head .login_title {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+}
+.login_head .header_right {
+    position: absolute;
+    right: 0.83333rem;
+}
+.login_head .header_right a {
+    color: #fff;
+}
+.icon_home {
+    position: absolute;
+    right: 1.25rem;
+    top: 0;
+    color: #fff;
+    line-height: 4rem !important;
+    margin: 0;
+}
+
+.login_cont {
+    padding: 0rem 0.83333rem 0 0.83333rem;
+}
+
+.login_cont .login_logo{
+    padding-bottom: 1.66667rem;
+    overflow: hidden;
+    text-align: center;
+}
+.login_cont .login_logo .icon_dalogo {
+    font-size: 15.41667rem;
+    text-align: center;
+    line-height: 70px;
+    color: #fff;
+    margin-left: -0.41667rem;
+    overflow: hidden;
+}
+
+
+
+
+
+
+.login_cont .login_box {
+    background-color: #fff;
+    height: 3.75rem;
+    margin-top: 1.25rem;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.login_cont .login_box input {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #333;
+    font-size: 1rem;
+    padding: 0.83333rem 0 0 2.91667rem;
+    line-height: 2.33333rem;
+}
+
+input {
+    -webkit-user-modify: read-write-plaintext-only;
+    color: #333;
+    background: none;
+    display: inline-block;
+    border-radius: 0;
+}
+.login_cont .login_box .icon.icon_unfinished {
+    right: 0.83333rem;
+    color: #c5c5c5;
+}
+.login_cont .login_box .icon {
+    position: absolute;
+    color: #777;
+    font-size: 1.33333rem;
+    top: 1.16667rem;
+    padding-left: 0.83333rem;
+}
+
+.login_cont .login_box .icon.icon_password_hide,
+ .login_cont .login_box .icon.icon_password_show {
+    right: 0.83333rem;
+    color: #c5c5c5;
+    font-size: 1.83333rem;
+    top: 0.91667rem;
+}
+
+.login_cont .login_box {
+    background-color: #fff;
+    height: 3.75rem;
+    margin-top: 1.25rem;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.btn.btn_login {
+    background-color: #4ed6d1;
+    margin-top: 2.08333rem;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.btn {
+    background-color: #fff;
+    height: 3.75rem;
+    line-height: 3.75rem;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.login_cont .login_text {
+    font-size: 1.08333rem;
+    padding-top: 0.91667rem;
+    height: 1.66667rem;
+}
+
+.login_cont .login_text a, .login_cont .login_text div {
+    display: inline-block;
+    float: left;
+    color: #fff;
+}
+
+.login_cont .login_text a + a, .login_cont .login_text div + a {
+    float: right;
+}
+
+.btn.btn_regis {
+    background-color: #4a82b1;
+    margin-top: 2.08333rem;
+    width: 100%;
+}
+
+
+.btn {
+    background-color: #fff;
+    height: 3.75rem;
+    line-height: 3.75rem;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.login_cont .login_third {
+    padding-top: 3.75rem;
+    text-align: center;
+    padding-bottom: 3.16667rem;
+}
+
+.login_cont .login_third a {
+    color: #fff;
+    display: inline-block;
+    padding: 0 20px;
+}
+.login_cont .login_third a .icon{
+    font-size: 3.75rem;
+    position: relative;
+}
+
+.login_cont .login_third a {
+    color: #fff;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.copyright {
+    color: #c5c5c5;
+    text-align: center;
+    padding-bottom: 0.83333rem;
+}
