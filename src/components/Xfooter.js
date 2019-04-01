@@ -42,17 +42,25 @@ class Xfooter extends React.Component {
                     icon: 'icon icon_me_unselected'
                 }
             ],
-            cur: 'home'
+            cur: '/'
         }
     }
 
-    goto(path, name) {
+    goto(path) {
         let {history} = this.props;
         history.push({
             pathname: path
         })
         this.setState({
-            cur: name
+            cur: path
+        })
+    }
+
+    componentWillMount(){
+        console.log(this.props)
+        let {location} = this.props;
+        this.setState({
+            cur : location.pathname
         })
     }
 
@@ -62,8 +70,8 @@ class Xfooter extends React.Component {
             <ul className="clearfix">
                 {
                     navlist.map(item => (
-                        <li key={item.name} onClick={this.goto.bind(this, item.path, item.name)}
-                            style={cur === item.name ? {color: '#00bebf'} : {}}>
+                        <li key={item.name} onClick={this.goto.bind(this, item.path)}
+                            style={cur === item.path ? {color: '#00bebf'} : {}}>
 
                                 {
                                     item.name === 'cart' ? (<Badge count={5}>

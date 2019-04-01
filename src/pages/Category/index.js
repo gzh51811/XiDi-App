@@ -2,16 +2,13 @@ import React from 'react';
 
 import {Route, Switch, Redirect, withRouter} from 'react-router-dom';
 
+import Header from '../../components/Category/Header'
 
 class Category extends React.Component {
     render() {
         return (
-            <div>
-
-
-                <h1>fenlei </h1>
-
-
+            <div className='main'>
+                <Header />
             </div>
 
         )
