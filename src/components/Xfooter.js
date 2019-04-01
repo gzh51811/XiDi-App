@@ -2,78 +2,74 @@ import React from 'react';
 
 import '../../style/Xfooter.css';
 
+import {withRouter} from 'react-router-dom'
+
 class Xfooter extends React.Component {
     constructor() {
         super();
         this.state = {
-            navlist: [{
-                title: "首页",
-                name: "home",
-                path: "/home",
-            },
-            {
-                title: "国家馆",
-                name: "nation",
-                path: "/nation",
-            },
-            {
-                title: "分类",
-                name: "list",
-                path: "/list",
-            },
-            {
-                title: "购物车",
-                name: "cart",
-                path: "/cart",
-            },
-            {
-                title: "我",
-                name: "mine",
-                path: "/mine",
-            }]
+            navlist: [
+                {
+                    title: "首页",
+                    name: "home",
+                    path: "/",
+                    icon : 'icon icon_homenew_on'
+                },
+                {
+                    title: "国家馆",
+                    name: "nation",
+                    path: "/nation",
+                    icon : 'icon icon_country2'
+                },
+                {
+                    title: "分类",
+                    name: "category",
+                    path: "/category",
+                    icon : 'icon icon_classification'
+                },
+                {
+                    title: "购物车",
+                    name: "cart",
+                    path: "/cart",
+                    icon : 'icon icon_Cart'
+                },
+                {
+                    title: "我",
+                    name: "mine",
+                    path: "/mine",
+                    icon : 'icon icon_me_unselected'
+                }
+            ]
         }
-
     }
+
+    goto(path){
+        let {history} = this.props;
+        history.push({
+            pathname : path
+        })
+    }
+
     render() {
-        let{navlist} = this.state
+        let {navlist} = this.state
         return <section className="foot_tab clearfix">
-                            <ul className="clearfix">
-                                <li>
-                                    <div className="link oversea-origin on">
-                                        <i className="icon icon_homenew_on"></i>
-                                        <div>首页</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="link factory-parity">
-                                        <i className="icon icon_country2"></i>
-                                        <div>国家馆</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="link certified-products">
-                                        <i className="icon icon_classification"></i>
-                                        <div>分类</div>
-                                    </div>
-                                </li> 
-                                <li>
-                                    <div className="link shanghai-postal">
-                                        <i className="icon icon_Cart"></i>
-                                        <div>购物车</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="link shanghai-postal">
-                                        <i className="icon icon_me_unselected"></i>
-                                        <div>我</div>
-                                    </div>
-                                </li>
-                            </ul>
-                      </section>
+            <ul className="clearfix">
+                    {
+                        navlist.map(item=>(
+                            <li key={item.name} onClick={this.goto.bind(this,item.path)}>
+                                <div className="link ">
+                                    <i className={item.icon}>
+                                    </i>
+                                    <div>{item.title}</div>
+                                </div>
+                            </li>
+                        ))
+                    }
+            </ul>
+        </section>
     }
-
-
-
 }
+
+Xfooter = withRouter(Xfooter);
 
 export default Xfooter
