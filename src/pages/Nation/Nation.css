@@ -187,6 +187,30 @@
     color: #00bebf;
 }
 
+.country_nav .country_nav_two.on {
+    visibility: inherit;
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.country_nav .country_nav_two {
+    width: 100%;
+    position: absolute;
+    top: 3.66667rem;
+    left: 0;
+    z-index: 9999;
+    visibility: hidden;
+    font-size: 1.25rem;
+    opacity: 0;
+    -webkit-transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 40px, 0);
+    -webkit-transition: 300ms;
+    transition: 300ms;
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
 .single_list_shop h1 {
     padding: 0.83333rem 0 1.66667rem 0;
     font-size: 1.41667rem;

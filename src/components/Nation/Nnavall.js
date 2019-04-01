@@ -143,7 +143,8 @@ class Nnavall extends React.Component{
                     </a>
                 </li>
                 <li >
-                    <a href="/countryDetail/076" className=""><div className="seize">
+                    <a href="/countryDetail/076" className="">
+                    <div className="seize">
                         <img src="//static.xidibuy.com/m/static/global/images/1.0.0/country/country_076.jpg" />
                         <p >巴西馆</p>
                     </div>

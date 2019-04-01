@@ -9,7 +9,10 @@ import Register from './pages/Register';
 import Mine from './pages/Mine';
 import { HashRouter } from 'react-router-dom';
 
-import { Route,Switch,Redirect,withRouter} from 'react-router-dom';
+import {Route, Switch, Redirect, withRouter} from 'react-router-dom';
+
+import {Provider} from 'react-redux'
+import store from './store'
 
 
 //引入样式

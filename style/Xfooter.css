@@ -1,7 +1,7 @@
 .foot_tab {
     width: 100%;
     position: fixed;
-    height: 3.33333rem;
+    height: 4rem;
     border: 1px solid #dddddd;
     bottom: 0;
     left: 0;
@@ -24,4 +24,9 @@
     float: left;
     width: 20%;
     text-align: center;
+}
+
+.ant-badge-count{
+    top:5px;
+    background-color:#00bebf;
 }
