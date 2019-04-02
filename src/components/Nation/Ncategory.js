@@ -1,5 +1,8 @@
 import React from 'react';
 
+import * as Swiper from 'swiper/dist/js/swiper.js';
+import 'swiper/dist/css/swiper.min.css';
+
 class Ncategory extends React.Component {
     constructor() {
         super();
@@ -59,18 +62,25 @@ class Ncategory extends React.Component {
                     name: "瑞士精选"
                 }
             ],
-                on:false
+            on: false
         }
     }
-    show(){
-        // console.log(this.state);
-        
-        this.setState({  
-            on : !this.state.on 
-          
+    componentDidMount() {
+        var mySwiper = new Swiper('.swiper-container', {
+            freeMode: true,
+            slidesPerView: 3,
+            
+
         })
     }
-  
+
+    show() {
+        this.setState({
+            on: !this.state.on
+
+        })
+    }
+
 
 
     render() {
@@ -78,18 +88,18 @@ class Ncategory extends React.Component {
         return (
             <div className="country_nav_position">
                 <div className="country_nav">
-                    <div className="country_nav_one">
-                        <ul data-num="0" style={{ transform: 'translateX(0px)', transition: 'all 300ms ease 0s' }} >
+                    <div className="country_nav_one swiper-container">
+                        <ul data-num="0"  className="swiper-wrapper">
                             {
-                                category.map(item => <li className={item.name =="16国特品精选"?"on":null} key={item.name}>{item.name}</li>)
+                                category.map(item => <li  className={["swiper-slide" , item.name == "16国特品精选" ? "on" : null].join(" ")} key={item.name}>{item.name}</li>)
                             }
                         </ul>
                     </div>
-                    <div className={["jiantou",this.state.on == true? "on":null].join(" ")}>
+                    <div style={{zIndex:"99"}} className={["jiantou", this.state.on == true ? "on" : null].join(" ")}>
                         <div className="oall">全部</div>
                         <i className="icon icon_triangle_down" onClick={this.show.bind(this)}></i>
                     </div>
-                    <div className={["country_nav_two",this.state.on==true? "on":null].join(" ")}>
+                    <div className={["country_nav_two", this.state.on == true ? "on" : null].join(" ")}>
                         <ul>
                             {
                                 category.map(item => <li className="" key={item.name}>{item.name}</li>)
