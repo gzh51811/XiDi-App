@@ -15,8 +15,12 @@ import {Provider} from 'react-redux'
 import store from './store'
 
 
+import Swiper from 'swiper/dist/js/swiper.js'
+import 'swiper/dist/css/swiper.min.css'
+
 //引入样式
 import '../style/index.css';
+import '../style/public.css';
 
 ReactDOM.render(
     <HashRouter>
