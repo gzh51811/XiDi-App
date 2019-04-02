@@ -1,0 +1,26 @@
+.left_nav[data-v-4d4f9a2d] {
+    width: 7.5rem;
+    float: left;
+    background-color: #f3f3f3;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 4.16667rem;
+}
+
+.left_nav ul li[data-v-4d4f9a2d] {
+    display: block;
+    height: 5.41667rem;
+    text-align: center;
+    line-height: 5.41667rem;
+    font-size: 1.16667rem;
+}
+
+.left_nav ul li.on[data-v-4d4f9a2d] {
+    font-size: 1.33333rem;
+    background-color: #ffffff;
+    color: #00bebf;
+}
