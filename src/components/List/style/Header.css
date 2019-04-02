@@ -1,0 +1,91 @@
+.headFixed[data-v-6afe8af9] {
+    position: fixed;
+    top: 0;
+    z-index: 995;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    width: 100%;
+    max-width: 53.33333rem;
+    height: 4rem;
+    line-height: 4rem;
+    background-color: #fff;
+    padding: 0 1.25rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+    overflow:hidden;
+}
+
+.header .icon_back[data-v-8d7463b0], .header .icon_close[data-v-8d7463b0], .header1 .icon_back[data-v-8d7463b0], .header1 .icon_close[data-v-8d7463b0], .header2 .icon_back[data-v-8d7463b0], .header2 .icon_close[data-v-8d7463b0], .header3 .icon_back[data-v-8d7463b0], .header3 .icon_close[data-v-8d7463b0] {
+    position: absolute;
+    left: -0.41667rem;
+    font-size: 2rem;
+    line-height: 48px;
+    color: #999;
+    width: 4rem;
+}
+
+.header .header-title-tepian[data-v-8d7463b0] {
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+}
+
+.header .header-title-tepian p[data-v-8d7463b0] {
+    display: block;
+    width: 16.66667rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 48px;
+    line-height: 48px;
+    white-space: nowrap;
+}
+
+.header .header-right[data-v-8d7463b0] {
+    display: block;
+    top: 0;
+}
+
+.header .header-right[data-v-8d7463b0], .header1 .header-right[data-v-8d7463b0], .header2 .header-right[data-v-8d7463b0], .header3 .header-right[data-v-8d7463b0] {
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    height: 4rem;
+}
+
+.header .header-right .search_title[data-v-8d7463b0] {
+    right: 4rem;
+    position: absolute;
+    font-size: 2rem;
+    background-color: #ffffff;
+    text-align: left;
+    height: 2.33333rem;
+    line-height: 2.33333rem;
+    color: #7f7f7f;
+    top: .83333rem;
+    border-radius: .33333rem;
+    padding: 0 0.41667rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+.header .header-right .search_title .icon_search[data-v-8d7463b0] {
+    font-size: 2.0rem;
+    position: relative;
+    top: -2px;
+    right: -5px;
+    margin-top: 0;
+}
+
+.header .headerBox .search_title .icon_search[data-v-8d7463b0] {
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 1.8rem;
+    line-height: 1.16667rem;
+    width: 2.08333rem;
+    color: #888;
+}
