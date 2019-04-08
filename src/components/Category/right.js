@@ -92,7 +92,6 @@ class Right extends React.Component {
     render() {
         let {navList, cur} = this.props;
         let {distance} = this.state;
-        console.log(`translate3d(0px,(${667 + distance})px,0px)`);
         return (
             <div data-v-4d4f9a2d="" className="rightall" style={{width: "285px"}} ref='right'>
                 {

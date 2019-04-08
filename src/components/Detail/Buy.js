@@ -9,12 +9,6 @@ class Buy extends React.Component {
         }
     }
 
-    componentDidMount(){
-        this.setState({
-            ipt : 1
-        })
-    }
-
     onChange(e) {
         let result = e.target.value;
         if (result < 1) {

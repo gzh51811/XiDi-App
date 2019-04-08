@@ -8,7 +8,7 @@ import qs from 'qs'
 
 import Header from '../../components/Detail/Header'
 import Top from '../../components/Detail/Top'
-import Bottom from '../../components/Detail/Bottom'
+// import Bottom from '../../components/Detail/Bottom'
 import Footer from "../../components/Detail/Footer";
 import Buy from "../../components/Detail/Buy";
 
@@ -50,14 +50,13 @@ class Detail extends React.Component {
     }
 
     render() {
-        console.log(this.state.goods);
         return (
             <div data-v-08814b0b className="wrap">
                 <Header/>
                 <span data-v-08814b0b>
                     <div data-v-08814b0b className='content_3'>
                         <Top goods={this.state.goods} changeShow={this.changeShow.bind(this)} />
-                        <Bottom />
+                        {/*<Bottom />*/}
                     </div>
                 </span>
                 <Footer changeShow={this.changeShow.bind(this)} />
