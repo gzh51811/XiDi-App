@@ -33,7 +33,8 @@ class MySwiper extends Component {
     componentDidMount() {
         new Swiper(this.swiperID, {
             loop: true,
-
+            observer: true,
+            observeParents: true,
             autoplay: {
                 delay: 2000,
                 disableOnInteraction: false
