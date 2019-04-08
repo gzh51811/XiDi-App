@@ -34,7 +34,7 @@ class Xsearch extends React.Component{
        render(){
         // style={this.state.isok == true?{top:"0px"}:{ top: "-10000px" }}
             let{hor} = this.state
-            console.log(this.props.isok);
+            // console.log(this.props.isok);
           return(
             <div className="search_cont wrapper" style={this.props.isok == true?{top:"0px"}:{ top: "-10000px" }}>
             <div className="search_heard">

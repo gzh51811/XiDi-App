@@ -239,7 +239,9 @@
     height: 3.66667rem;
 }
 
-
+.login_cont .login_box_duan .disabled{
+    color: white;
+}
 
 
 .country_nav {
@@ -258,7 +260,7 @@
 }
 
 .country_nav .country_nav_one ul {
-    overflow-x: scroll;
+
     white-space: nowrap;
 }
 
@@ -270,7 +272,7 @@
     padding: 0 1.25rem;
     display: inline-block;
     text-align: center;
-    margin-right: -3px;
+    margin-right: -5px;
     color: #222222;
     font-size: 1.25rem;
 }
