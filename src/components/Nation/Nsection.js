@@ -387,7 +387,7 @@ function Nsection() {
                     </li>
                 </ul>
                 <div className="more_shop">
-                    <a href="//tepin.m.xidibuy.com/">查看16国特品全部商品
+                    <a href="javascript:;">查看16国特品全部商品
                          <i className="icon icon_triangle_right"></i>
                     </a>
                 </div>

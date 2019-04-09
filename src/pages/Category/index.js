@@ -18,13 +18,18 @@ class Category extends React.Component {
     }
 
     async componentWillMount(){
+
         let {axios} = this.props;
         let data = await axios.get('/category');
         this.setState({
             navList : data.data[0].data.cats
         })
     }
-
+    componentWillUnmount(){
+        let {location} =this.props;
+        let path = location.pathname
+        localStorage.setItem("luyou",path)
+    }
     changeCur(idx){
         this.setState({
             cur : idx

@@ -9,6 +9,11 @@ import CartSection from '../../components/cart/CartSection';
 import CartInfo from '../../components/cart/CartInfo';
 
 class Cart extends React.Component {
+    componentWillUnmount(){
+        let {location} =this.props;
+        let path = location.pathname
+        localStorage.setItem("luyou",path)
+    }
     render() {
         let goodsInfo = this.props.count.cart;
 
