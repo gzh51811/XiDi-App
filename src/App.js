@@ -17,11 +17,6 @@ import { connect } from 'react-redux'
 
 class App extends React.Component {
 
-<<<<<<< HEAD
-      componentWillMount() {
-            this.props.dispatch({ type: 'INIT_CART_ASYNC',payload : {"uid" : 1}});
-      }
-=======
 
 
 class App extends React.Component{
@@ -40,7 +35,6 @@ class App extends React.Component{
                  <Xfooter/>
             </div> 
       }  
->>>>>>> 68117a74e658bc035a1173683314428f14933e6e
 
       render() {
             return <div>
