@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
-
 import Header from '../../components/home/header';
 import Swiper from '../../components/home/swiper';
 import HomeInfo from '../../components/home/homeInfo';
@@ -31,7 +29,14 @@ class Home extends React.Component {
     }
 
 
-    timeLoadH = null
+    
+    componentWillUnmount(){
+        let {location} =this.props;
+        let path = location.pathname
+        localStorage.setItem("luyou",path)
+    }
+
+    timeLoadH = null;
 
     componentDidMount() {
 
@@ -47,7 +52,6 @@ class Home extends React.Component {
         window.onscroll = function () {
             var sTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
 
-<<<<<<< HEAD
             //回到顶部
             var topNode = this.refs.toTop;
             if (topNode) {
@@ -58,13 +62,6 @@ class Home extends React.Component {
                 }
             }
 
-=======
-    componentWillUnmount(){
-        let {location} =this.props;
-        let path = location.pathname
-        localStorage.setItem("luyou",path)
-    }
->>>>>>> 68117a74e658bc035a1173683314428f14933e6e
 
             //图片懒加载
             var imgArr = document.querySelectorAll("img[lazy='loaded']");
