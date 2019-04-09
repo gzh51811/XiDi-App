@@ -12,7 +12,6 @@ import Top from '../../components/Detail/Top'
 import Footer from "../../components/Detail/Footer";
 import Buy from "../../components/Detail/Buy";
 
-
 class Detail extends React.Component {
     constructor() {
         super();
