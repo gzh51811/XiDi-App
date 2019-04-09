@@ -2,15 +2,20 @@ import React from 'react'
 
 import './style/Header.css'
 
-class Header extends React.Component {
+import {withRouter} from 'react-router-dom'
 
+class Header extends React.Component {
+    goBack(){
+        let {history} = this.props;
+        history.goBack();
+    }
 
     render() {
         return (
             <div>
                 <header data-v-6afe8af9="" className="header headFixed headFixed">
                     <div data-v-8d7463b0="" data-v-6afe8af9="" className="headerBox">
-                        <i data-v-8d7463b0="" className="icon icon_back">
+                        <i data-v-8d7463b0="" className="icon icon_back" onClick={this.goBack.bind(this)}>
                         </i>
                         <h2 data-v-8d7463b0="" className="header-title-tepian">
                             <p data-v-8d7463b0="">锅具</p>
@@ -32,5 +37,7 @@ class Header extends React.Component {
         )
     }
 }
+
+Header = withRouter(Header);
 
 export default Header;

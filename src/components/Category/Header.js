@@ -2,12 +2,21 @@ import React from 'react'
 
 import './style/Header.css'
 
-class Header extends React.Component {
+import {withRouter} from 'react-router-dom'
 
+class Header extends React.Component {
+    gotoSearch(){
+        let {history} = this.props;
+        // history.push({
+        //     pathname : '/search'
+        // });
+        console.log(666);
+    }
 
     render(){
+
         return (
-            <header data-v-99a1dd56="" className="header headFixed">
+            <header data-v-99a1dd56="" className="header headFixed" onClick={this.gotoSearch.bind(this)}>
                 <div data-v-7f444869="" data-v-99a1dd56="" className="headerBox">
                     <div data-v-7f444869="" className="search_title" style={{marginLeft: '0px'}}>
                         <div data-v-7f444869="" className="title_box">
@@ -21,5 +30,7 @@ class Header extends React.Component {
         )
     }
 }
+
+Header = withRouter(Header);
 
 export default Header;
