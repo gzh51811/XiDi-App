@@ -6,7 +6,7 @@ import App from './App'
 import Detail from './pages/Detail';
 import List from './pages/List';
 import Register from './pages/Register';
-import Mine from './pages/Mine';
+import Login from './pages/Login';
 import { HashRouter } from 'react-router-dom';
 
 import {Route, Switch, Redirect, withRouter} from 'react-router-dom';
@@ -28,8 +28,8 @@ ReactDOM.render(
             <Route path="/detail" component={Detail}/>
             <Route path="/list" component={List} />
             <Route path="/register" component={Register} />
-            <Route path='/mine' component={Mine}/> 
-            <Route path="/"  component={App} />
+            <Route path='/login' component={Login}/> 
+            <Route path="/"  component={App}/>
         </Switch>
     </HashRouter>
     , document.querySelector("#app")

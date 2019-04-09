@@ -6,6 +6,11 @@ import Purchase from '../../components/cart/purchase';
 import Command from '../../components/cart/command';
 
 class Cart extends React.Component {
+    componentWillUnmount(){
+        let {location} =this.props;
+        let path = location.pathname
+        localStorage.setItem("luyou",path)
+    }
     render() {
         return (
             <div className="cart">

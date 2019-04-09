@@ -1,9 +1,15 @@
 import React from 'react';
 
-function Mheader() {
+
+function Mheader({gotoback}) {
+    
+   
+
     return (
+
         <header className="login_head">
-            <div className="header_left"><i className="icon icon_triangle_left"></i>
+            <div className="header_left">
+                <i className="icon icon_triangle_left" onClick={gotoback}></i>
             </div>
             <div className="login_title" style={{display:"none"}}>喜地-登录</div>
             <div className="header_right">
@@ -16,6 +22,7 @@ function Mheader() {
     )
 
 }
+
 
 export default Mheader
 

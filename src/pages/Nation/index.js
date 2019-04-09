@@ -7,6 +7,12 @@ import  './Nation.css';
 
 
 class Nation extends React.Component{
+    componentWillUnmount(){
+        let {location} =this.props;
+        let path = location.pathname
+        localStorage.setItem("luyou",path)
+    }
+
       render(){
           return(
               <div className="main">

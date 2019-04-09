@@ -16,7 +16,11 @@ class Home extends React.Component {
 
     //页面渲染
 
-
+    componentWillUnmount(){
+        let {location} =this.props;
+        let path = location.pathname
+        localStorage.setItem("luyou",path)
+    }
 
     render() {
         return (
