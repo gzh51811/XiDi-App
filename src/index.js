@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 
 import ReactDOM from 'react-dom';
 import store from './store'
+// 引入connect高阶组件
+import { connect } from 'react-redux'
+
 
 
 // 引入react-redux
@@ -23,15 +26,17 @@ import '../style/index.css';
 import '../style/public.css';
 
 ReactDOM.render(
-    <HashRouter>
-        <Switch>
-            <Route path="/detail" component={Detail}/>
-            <Route path="/list" component={List} />
-            <Route path="/register" component={Register} />
-            <Route path='/login' component={Login}/> 
-            <Route path="/"  component={App}/>
-        </Switch>
-    </HashRouter>
+    <Provider store={store}>
+        <HashRouter>
+            <Switch>
+                <Route path="/detail" component={Detail} />
+                <Route path="/list" component={List} />
+                <Route path="/register" component={Register} />
+                <Route path='/login' component={Login} />
+                <Route path="/" component={App} />
+            </Switch>
+        </HashRouter>
+    </Provider>
     , document.querySelector("#app")
 
 )

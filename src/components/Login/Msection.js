@@ -115,7 +115,7 @@ class Msection extends React.Component {
 
         
         if(login&&regular){
-              axios.get("http://localhost:3000/login",{
+              axios.get("/login",{
                   params:{
                       username,
                       password

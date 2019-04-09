@@ -14,27 +14,28 @@ import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
 // 引入connect高阶组件
 import { connect } from 'react-redux'
 
-class App extends React.Component{
+
+class App extends React.Component {
 
 
-      render(){
-            
-        return<div>
-                <Switch>
-                       <Route path='/' exact component={Home}/> 
-                       <Route path='/category' component={Category}/> 
-                       <Route path='/cart' component={Cart}/> 
-                       <Route path='/nation' component={Nation}/> 
-                       <Route path='/mine' component={ Mine}/>
-                 </Switch>  
-                 <Xfooter/>
-            </div> 
-      }  
+      render() {
+
+            return <div>
+                  <Switch>
+                        <Route path='/' exact component={Home} />
+                        <Route path='/category' component={Category} />
+                        <Route path='/cart' component={Cart} />
+                        <Route path='/nation' component={Nation} />
+                        <Route path='/mine' component={Mine} />
+                  </Switch>
+                  <Xfooter />
+            </div>
+      }
 
 
 }
 
-// App = withRouter(App);
+App = withRouter(App);
 
 const mapStateToProps = (state) => {
 
