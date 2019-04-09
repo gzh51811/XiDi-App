@@ -48,5 +48,4 @@ class Category extends React.Component {
 }
 
 Category = withAxios(Category);
-
 export default Category
