@@ -1,22 +1,74 @@
-import  React from 'react';
+import React from 'react'
 
-import  Mheader from "../../components/Mine/Mheader";
-import  Msection from "../../components/Mine/Msection";
+import './Mines.css'
 
-import './mine.css';
+import Miheader from "../../components/Mine/Miheader"
+import Miusername from '../../components/Mine/Miusername'
+import Midingdan from '../../components/Mine/Midingdan'
+import Mikefu from '../../components/Mine/Mikefu'
+import Mituichu from '../../components/Mine/Mituichu'
+import Mitangchuang from '../../components/Mine/Mitanchuang'
 
-class Mine extends React.Component{
-      render(){
-          return(
-              <div className="othiscont" style={{minHeight: "667px"}}>
-                    <Mheader/>
-                    <Msection/>
-                    <p  className="copyright"> © 2019 喜地电子商务有限公司 版权所有</p>
-                </div>    
 
-          )
-      }  
 
+class Mine extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            tanchuang: false
+        }
+    }
+
+
+    componentDidMount() {
+        let user = localStorage.getItem("username");
+        if (user) {
+
+        }else{
+            this.props.history.push('/login')
+        }
+
+    }
+    
+    //退出状态
+    changetc(bool) {
+        this.setState({
+            tanchuang: bool
+        })
+    }
+
+
+
+    render() {
+        let { tanchuang } = this.state
+
+        return (
+
+            <div>
+
+                <div className="member-space">
+                    <Miheader />
+                    <div className="content">
+                        <div className="account-section">
+                            <Miusername />
+                            <Midingdan />
+                            <Mikefu />
+                            <Mituichu changetc={this.changetc.bind(this)} />
+                            {
+                                tanchuang ? <Mitangchuang changetc={this.changetc.bind(this)}
+                                /> : null
+                            }
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        )
+    }
 }
 
-export default  Mine
+export default Mine

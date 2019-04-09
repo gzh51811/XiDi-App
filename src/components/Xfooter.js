@@ -73,7 +73,7 @@ class Xfooter extends React.Component {
                             style={cur === item.path ? {color: '#00bebf'} : {}}>
 
                                 {
-                                    item.name === 'cart' ? (<Badge count={5}>
+                                    item.name === 'cart' ? (<Badge count={this.props.len}>
                                                                 <div className="link ">
                                                                 <i className={item.icon}>
                                                                 </i>

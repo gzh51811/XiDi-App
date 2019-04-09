@@ -69,7 +69,6 @@ class List extends React.Component {
     }
     render() {
         let {goodsList} = this.state;
-        // console.log(goodsList);
         return (
             <div data-v-26de577f className='main'>
                 <Header />

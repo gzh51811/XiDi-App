@@ -1,19 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import ReactDOM from 'react-dom';
+import store from './store'
+// 引入connect高阶组件
+import { connect } from 'react-redux'
+
+
+
+// 引入react-redux
+import { Provider } from 'react-redux';
+import { HashRouter } from 'react-router-dom';
+import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
 
 import App from './App'
 import Detail from './pages/Detail';
 import List from './pages/List';
 import Register from './pages/Register';
-import Mine from './pages/Mine';
-import { HashRouter } from 'react-router-dom';
-
-import {Route, Switch, Redirect, withRouter} from 'react-router-dom';
-
-import {Provider} from 'react-redux'
-import store from './store'
-
+import Login from './pages/Login';
 
 import Swiper from 'swiper/dist/js/swiper.js'
 import 'swiper/dist/css/swiper.min.css'
@@ -23,15 +26,17 @@ import '../style/index.css';
 import '../style/public.css';
 
 ReactDOM.render(
-    <HashRouter>
-        <Switch>
-            <Route path="/detail" component={Detail}/>
-            <Route path="/list" component={List} />
-            <Route path="/register" component={Register} />
-            <Route path='/mine' component={Mine}/> 
-            <Route path="/"  component={App} />
-        </Switch>
-    </HashRouter>
+    <Provider store={store}>
+        <HashRouter>
+            <Switch>
+                <Route path="/detail" component={Detail} />
+                <Route path="/list" component={List} />
+                <Route path="/register" component={Register} />
+                <Route path='/login' component={Login} />
+                <Route path="/" component={App} />
+            </Switch>
+        </HashRouter>
+    </Provider>
     , document.querySelector("#app")
 
 )

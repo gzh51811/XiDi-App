@@ -8,7 +8,6 @@ import qs from 'qs'
 
 import Header from '../../components/Detail/Header'
 import Top from '../../components/Detail/Top'
-// import Bottom from '../../components/Detail/Bottom'
 import Footer from "../../components/Detail/Footer";
 import Buy from "../../components/Detail/Buy";
 

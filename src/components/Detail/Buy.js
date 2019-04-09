@@ -50,6 +50,14 @@ class Buy extends React.Component {
         }
     }
 
+    addToCart(e){
+        let {price,name,goodsId} = this.props.goods;
+        let qty = this.state.ipt;
+
+        console.log(price,name,goodsId,qty);
+
+    }
+
     render() {
         let {goods, showBuy, changeShow} = this.props;
         let {ipt,confirm} = this.state;
@@ -130,7 +138,7 @@ class Buy extends React.Component {
                             </div>
                         </div>
                         <div data-v-08814b0b="" className="goodsSku-sub">
-                                            <span data-v-08814b0b="">
+                                            <span data-v-08814b0b="" onClick={this.addToCart.bind(this)}>
                                             确定
                                             </span>
                         </div>
