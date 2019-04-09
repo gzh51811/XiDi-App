@@ -20,8 +20,6 @@ class Category extends React.Component {
     async componentWillMount(){
         let {axios} = this.props;
         let data = await axios.get('/category');
-        console.log(data);
-        console.log(data.data[0].data.cats);
         this.setState({
             navList : data.data[0].data.cats
         })

@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-axios.defaults.baseURL ='http://10.3.137.199:3000';
+axios.defaults.baseURL ='http://localhost:3000';
 
 /**
  * 高阶组件：包装函数

@@ -21,7 +21,7 @@ module.exports = {
         // express + http-proxy-middleware
         // proxy:{
         //     '/jxapi/*':{
-        //         "target": "https://m.jiuxian.com", //目标服务器
+        //         "target": "https://m.xidibuy.com", //目标服务器
         //         "changeOrigin": true,
         //         "pathRewrite": {
         //             "^/jxapi" : "/"

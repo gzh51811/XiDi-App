@@ -5,65 +5,47 @@ import 'swiper/dist/css/swiper.min.css';
 
 
 class MySwiper extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            dataList: [
-                {
-                    href: "https://m.xidibuy.com/special/416zhijiang",
-                    imgUrl: "https://image.xidibuy.com/common/common.e29e81bff967004a74e99a97997d8bd932fe2afc1696495dbf5aa4c4361a27fb.jpeg/640"
+
+    componentDidUpdate() {
+        setTimeout(() => {
+            new Swiper(this.swiperID, {
+                loop: true,
+                observer: true,
+                observeParents: true,
+                autoplayDisableOnInteraction : false,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false
                 },
-                {
-                    href: "/#/list",
-                    imgUrl: "https://image.xidibuy.com/common/common.8e383668cc0d04cf45ff1bf106b1e7cb7be1ddb675ef33e6bf5aa4c4361a27fb.jpeg/640x320/640"
-                },
-                {
-                    href: "/#/list",
-                    imgUrl: "https://image.xidibuy.com/common/common.e29e81bff967004a74e99a97997d8bd932fe2afc1696495dbf5aa4c4361a27fb.jpeg/640"
-                },
-                {
-                    href: "/#/list",
-                    imgUrl: "https://image.xidibuy.com/common/common.8e383668cc0d04cf45ff1bf106b1e7cb7be1ddb675ef33e6bf5aa4c4361a27fb.jpeg/640x320/640"
+                pagination: {
+                    el: this.refs.pagination,
                 }
-            ],
-
-        };
+    
+            })            
+        }, 200);
     }
-
-    componentDidMount() {
-        new Swiper(this.swiperID, {
-            loop: true,
-
-            autoplay: {
-                delay: 2000,
-                disableOnInteraction: false
-            },
-            pagination: {
-                el: this.paginateID,
-            }
-        })
-    }
-
 
     render() {
         return (
-            <div data-v-75a61c74="" className="Homeswiper" style={{marginBottom : '10px'}}>
-                <div className="swiper-container"  ref={self => this.swiperID = self}>
+            <div data-v-75a61c74="" className="Homeswiper" style={{ marginBottom: '10px',marginTop : '4rem' }}>
+                <div className="swiper-container" ref={self => this.swiperID = self}>
 
                     <div className="swiper-wrapper">
                         {
-                            this.state.dataList.map((item, idx) => {
-                                return (
-                                    <div className="imgItem swiper-slide" style={{ width: '375px' }} key={idx}>
-                                        <a href={item.href}>
-                                            <img src={item.imgUrl} className="swiper-img"/>
-                                        </a>
-                                    </div>
-                                )
-                            })
+                            this.props.banners ? (
+                                this.props.banners.map((item, idx) => {
+                                    return (
+                                        <div className="imgItem swiper-slide" style={{ width: '375px' }} key={idx}>
+                                            <a href="/#/list">
+                                                <img src={item.img} className="swiper-img" />
+                                            </a>
+                                        </div>
+                                    )
+                                })
+                            ) : ''
                         }
                     </div>
-                    <div className="swiper-pagination"  ref={self => this.paginateID = self}/>
+                    <div className="swiper-pagination" ref="pagination" />
                 </div>
             </div>
         );
