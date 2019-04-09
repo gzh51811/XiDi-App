@@ -67,7 +67,6 @@ class List extends React.Component {
                 break;
         }
     }
-
     render() {
         let {goodsList} = this.state;
         // console.log(goodsList);

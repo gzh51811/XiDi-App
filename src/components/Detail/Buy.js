@@ -56,6 +56,7 @@ class Buy extends React.Component {
         if (!goods.coverImg) {
             return '';
         }
+        let cur = goods.curColorAndsSize[0];
         return (
             <div data-v-08814b0b="" className="buy-dialog" style={showBuy ? {display: 'block'} : {display: 'none'}}
                  onClick={this.changeShow.bind(this)}>
@@ -92,9 +93,9 @@ class Buy extends React.Component {
                                         {
                                             goods.priceAttr.map(item => (
                                                 <span data-v-08814b0b="" data-allsize="" className={confirm ? 'on' : ''}
-                                                      key={item.children[37].name}>
+                                                      key={item.children[cur].name}>
                                                     <b data-v-08814b0b="">
-                                                        {item.children[37].name}
+                                                        {item.children[cur].name}
                                                     </b>
                                                 </span>
 

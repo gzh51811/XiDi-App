@@ -26,6 +26,10 @@ class Detail extends React.Component {
         this.getData();
     }
 
+    componentDidUpdate(){
+        this.getData();
+    }
+
     async getData() {
         let {axios, location} = this.props;
         let id = location.search.split('=')[1];
