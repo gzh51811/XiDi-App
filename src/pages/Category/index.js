@@ -38,7 +38,7 @@ class Category extends React.Component {
                 <Header />
                 <section data-v-4d4f9a2d className='contentbox'>
                     <Left navList={navList} changeCur={this.changeCur.bind(this)} cur={cur} />
-                    <Right navList={navList} cur={cur} />
+                    <Right navList={navList} cur={cur} changeCur={this.changeCur.bind(this)} />
                 </section>
             </div>
 
