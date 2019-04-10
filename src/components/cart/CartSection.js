@@ -6,7 +6,7 @@ import cartAction, { update_total, removeGoods } from '../../actions/cartAction'
 
 
 class CartSection extends React.Component {
-
+    
     checkAll = e => {
         var spanAll = document.querySelector('.checkAll');
         var spanList = document.querySelectorAll('.icon_complete_circle');
@@ -25,7 +25,7 @@ class CartSection extends React.Component {
             });
 
             this.props.count.cart.goodslist.map(item => {
-                total += item.qty * item.data.price;
+                total += item.qty * item.price;
                 return;
             })
         }
@@ -48,8 +48,8 @@ class CartSection extends React.Component {
 
             //金额计算
             [].map.call(cartInfo.goodslist, item => {
-                if (item._id == id) {
-                    total -= item.qty * item.data.price;
+                if (item.goodsId == id) {
+                    total -= item.qty * item.price;
                 }
                 return;
             })
@@ -68,8 +68,8 @@ class CartSection extends React.Component {
             }
 
             [].map.call(cartInfo.goodslist, item => {
-                if (item._id == id) {
-                    total += item.qty * item.data.price;
+                if (item.goodsId == id) {
+                    total += item.qty * item.price;
                 }
                 return;
             })
@@ -87,14 +87,16 @@ class CartSection extends React.Component {
         console.log('+')
     }
 
-    deleteItem = async (gid, e) => {
+    deleteItem = async (username,goodsId, e) => {
         // var flag = confirm('您忍心放弃我吗?');
         // console.log(flag);
         var flag = true;
 
         if (flag) {
             //删除商品
-            this.props.dispatch(removeGoods(1, gid));
+            console.log(username,goodsId);
+            
+            this.props.dispatch(removeGoods(username, goodsId));
 
             setTimeout((() => {
 
@@ -104,7 +106,7 @@ class CartSection extends React.Component {
                 console.log(goodslist);
                 [].map.call(spanItems, (item, idx) => {
                     if (item.classList.contains('checked')) {
-                        total += goodslist[idx].qty * goodslist[idx].data.price;
+                        total += goodslist[idx].qty * goodslist[idx].price;
                     }
                 })
     
@@ -141,12 +143,12 @@ class CartSection extends React.Component {
                             </div>
                             <div data-v-59dce934="" className="shopbox_bottom"></div>
                             {
-                                this.props.data.map(item => {
+                                this.props.data.map(item=> {
                                     return (
-                                        <div data-v-59dce934="" className="cart-box" key={item._id}>
+                                        <div data-v-59dce934="" className="cart-box" key={item.goodsId}>
                                             <div data-v-59dce934="" className="cart-module">
                                                 <div data-v-59dce934="" className="cart-column cart-check">
-                                                    <div data-v-59dce934="" className="cart-check-box" onClick={this.checkItem.bind(this, item._id)}>
+                                                    <div data-v-59dce934="" className="cart-check-box" onClick={this.checkItem.bind(this, item.goodsId)}>
                                                         <span data-v-59dce934="" className="icon icon_complete_circle checkItem"  ></span>
                                                     </div>
                                                 </div>
@@ -154,7 +156,7 @@ class CartSection extends React.Component {
                                                     <div data-v-59dce934="" className="cart-goods-info clearfix">
                                                         <div data-v-59dce934="" className="cart-column cart-img">
                                                             <a data-v-59dce934="" href="/detail/20910" className="">
-                                                                <img data-v-59dce934="" src={"https://image.xidibuy.com/" + item.data.imgList.mainImgs[0]}
+                                                                <img data-v-59dce934="" src={"https://image.xidibuy.com/" + item.imgUrl}
                                                                 />
                                                             </a>
                                                         </div>
@@ -162,11 +164,11 @@ class CartSection extends React.Component {
                                                             <div data-v-59dce934="" className="cart-goods-intro">
                                                                 <div data-v-59dce934="" className="intro-left">
                                                                     <h3 data-v-59dce934="" className="cart-goods-name">
-                                                                        <a data-v-59dce934="" href="/detail/20910" className="">{item.data.goodsName}</a>
+                                                                        <a data-v-59dce934="" href="/detail/20910" className="">{item.name}</a>
                                                                     </h3>
                                                                     <p data-v-59dce934="" className="cart-goods-attr">黑色</p>
                                                                 </div>
-                                                                <div data-v-59dce934="" className="cart-goods-price">¥{item.data.price}</div>
+                                                                <div data-v-59dce934="" className="cart-goods-price">¥{item.price}</div>
                                                             </div>
                                                             <div data-v-59dce934="" className="cart-counter">
                                                                 <div data-v-59dce934="" className="counter">
@@ -175,7 +177,7 @@ class CartSection extends React.Component {
                                                                     <span data-v-59dce934="" xa-tap="cart|m-increase" className="increase" onClick={this.increace}></span>
                                                                 </div>
                                                                 <div data-v-59dce934="" className="cart-goods-notice">
-                                                                    <p data-v-59dce934="" data-class="remove" className="icon icon_clear" onClick={this.deleteItem.bind(this, item.data.goodsId)}></p>
+                                                                    <p data-v-59dce934="" data-class="remove" className="icon icon_clear" onClick={this.deleteItem.bind(this ,localStorage.getItem('username') , item.goodsId)}></p>
                                                                 </div>
                                                             </div>
                                                         </div>

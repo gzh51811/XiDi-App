@@ -38,7 +38,7 @@ let reducer = (state={total:0},{type,payload})=>{
         case REMOVE_FROM_CART:
             return {
                 ...state,
-                goodslist:state.goodslist.filter(item=>item.data.goodsId!=payload.gid)
+                goodslist:state.goodslist.filter(item=>item.goodsId!=payload.goodsId)
             }
         
         // 修改购物车商品数量

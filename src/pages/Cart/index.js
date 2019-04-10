@@ -14,15 +14,17 @@ class Cart extends React.Component {
         let path = location.pathname
         localStorage.setItem("luyou",path)
     }
+    
     render() {
-        let goodsInfo = this.props.count.cart;
+        console.log("cart",this.props);
+        let goodsInfo = this.props.cart;
 
         return (
             <div className="cart">
                 <Header />
                 <Login />
                 {
-                    goodsInfo.goodslist ? <CartSection data={goodsInfo.goodslist}/> : <Purchase />
+                    goodsInfo.goodslist ? <CartSection data={goodsInfo.goodslist} /> : <Purchase />
                 }
                 <Command />
                 <CartInfo total={goodsInfo.total}/> 
@@ -35,9 +37,9 @@ class Cart extends React.Component {
 
 }
 
-const mapStateToProps = state => ({
-    count: state
-});
+const mapStateToProps = state => {
+    return state
+};
 
 
 export default connect(mapStateToProps)(Cart);

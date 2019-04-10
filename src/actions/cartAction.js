@@ -32,10 +32,11 @@ export function add(goods){
     }
 }
 
-export function removeGoods(uid,gid){
+export function removeGoods(username,goodsId){
+    console.log('cartAction ', username,goodsId);
     return {
         type:"DELETE_FROM_CART_ASYNC",
-        payload:{uid,gid}
+        payload:{username,goodsId}
     }
 }
 

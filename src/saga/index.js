@@ -11,9 +11,9 @@ function* initCart(action) {
     console.log('初始化购物车');
 
     try {
-        let result = yield call(getData, IP + '/cart/init',{uid : action.payload.uid});
-        
-        yield console.log(result);
+        let result = yield call(getData, IP + '/cart/init',{username : action.payload.username});
+
+        yield console.log(result.data);
         
         yield put({type : 'INIT_CART',payload : result.data})
 
@@ -29,14 +29,16 @@ function* initCart(action) {
 
 //删除数据
 function* deleteFromCart(action) {
-    let {uid,gid} = action.payload;
+    let {username,goodsId} = action.payload;
     try {
         let result = yield call(getData, IP + '/cart/deleteItem',{
-            uid ,
-            gid 
+            username ,
+            goodsId
         });
+
+        yield console.log(result);
         
-        yield put({type : 'REMOVE_FROM_CART',payload : {gid}})
+        yield put({type : 'REMOVE_FROM_CART',payload : {goodsId}});
 
     } catch (error) {
         yield put({ type: 'ADD_TO_CART_FAIL' })
@@ -46,13 +48,15 @@ function* deleteFromCart(action) {
     let state = select();//等效于store.getState()
 
     console.log('删除购物车信息')
+
 }
 
 
 function* addToCar(action) {
     console.log('添加购物车');
+    let {username,goodsInfo} = action.payload;
     try {
-        let goods = yield call(getData, '/api/cart', { page: 1, qty: 10 });//getData('/api/cart',{page:1,qty:10})
+        let goods = yield call(getData, IP + '/addToCart', {username, goodsInfo});//getData('/api/cart',{page:1,qty:10})
         yield put({ type: 'ADD_TO_CART', payload: goods });//等效小dispatch({type})
     } catch (err) {
         yield put({ type: 'ADD_TO_CART_FAIL' })

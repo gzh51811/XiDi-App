@@ -1,4 +1,8 @@
 import React from 'react'
+import withAxios from '../../hoc/withAxios';
+import { connect } from "react-redux";
+import {withRouter} from 'react-router-dom';
+
 
 class Buy extends React.Component {
     constructor() {
@@ -51,10 +55,30 @@ class Buy extends React.Component {
     }
 
     addToCart(e){
-        let {price,name,goodsId} = this.props.goods;
-        let qty = this.state.ipt;
 
-        console.log(price,name,goodsId,qty);
+        let username = localStorage.getItem("username")
+        console.log(this.props.goods);
+        let {price,name,goodsId,imgList} = this.props.goods;
+        let qty = this.state.ipt;
+        let goodsInfo = {
+            goodsId,
+            name,
+            price,
+            imgUrl : imgList.mainImgs[0],
+            qty
+        };
+        let cartInfo = {
+            username,
+            goodsInfo,
+            update : 'add'
+        };
+        
+        var _this = this;
+        this.props.axios.get('/updateCart',{params : cartInfo}).then(
+            res => {
+                _this.props.history.push('/cart');
+            }
+        );
 
     }
 
@@ -148,4 +172,12 @@ class Buy extends React.Component {
     }
 }
 
-export default Buy;
+Buy = withAxios(Buy);
+
+Buy = withRouter(Buy);
+
+const mapStateToProps = state => ({
+    count: state
+});
+
+export default connect(mapStateToProps)(Buy);
